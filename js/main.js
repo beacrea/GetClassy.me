@@ -1,5 +1,18 @@
 /*
  * -------------------------------------------
+ *	$_PRELOAD IMAGES
+ * -------------------------------------------
+ */
+$.preloadImages = function() {
+    for (var i = 0; i < arguments.length; i++) {
+        $("<img />").attr("src", arguments[i]);
+    }
+}
+
+$.preloadImages("../img/app/rainAnim.gif","../img/app/fireAnim.gif");
+
+/*
+ * -------------------------------------------
  *	$_AUDIO LAYER CONTROL
  * -------------------------------------------
  */
