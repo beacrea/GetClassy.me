@@ -42,50 +42,45 @@
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
 
-	    <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
-	    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+	    <div class="wrapper_app">
+		    <section class="hero_fire overlayCommon">
+			    <p class="leadin">- It's time to -</p>
+			    <h1>Get Classy</h1>
+			    <p class="desc">Make all your moments memorable.</p>
+		    </section><!-- /..hero_fire -->
 
+		    <iframe width="600" height="60" src="//www.youtube.com/embed/thSfGPZGmnQ?list=PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj&autoplay=1" frameborder="0"></iframe>
+		    <section class="ambient clearfix">
+			    <div class="wrapper_rain overlayCommon">
+				    <span>Rain</span>
+			    </div><!-- /.wrapper_rain -->
+			    <div class="wrapper_fire overlayCommon">
+				    <span>Fire</span>
+				    <div class="wrapper_volume">
 
-    <div class="wrapper_app">
-	    <section class="hero_fire overlayCommon">
-		    <p class="leadin">- It's time to -</p>
-		    <h1>Get Classy</h1>
-		    <p class="desc">Make all your moments memorable.</p>
-	    </section><!-- /..hero_fire -->
+				    </div><!-- /.wrapper_volume -->
+			    </div><!-- /.wraper_fire -->
+		    </section><!-- /.ambient -->
+		    <section class="controls">
 
-	    <iframe width="600" height="60" src="//www.youtube.com/embed/thSfGPZGmnQ?list=PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj&autoplay=1" frameborder="0"></iframe>
-	    <section class="ambient clearfix">
-		    <div class="wrapper_rain overlayCommon">
-			    <span>Rain</span>
-		    </div><!-- /.wrapper_rain -->
-		    <div class="wrapper_fire overlayCommon">
-			    <span>Fire</span>
-			    <div class="wrapper_volume">
+			    <div class="controls_rain">
+				    <button onclick="document.getElementById('audio_rain').volume+=0.1">Increase Volume</button>
+				    <button onclick="document.getElementById('audio_rain').volume-=0.1">Decrease Volume</button>
+			    </div>
+			    <div class="controls_fire ">
+				    <button class="fa fa-volume-down" onclick="document.getElementById('audio_fire').volume-=0.1"> Down</button>
+				    <button class="fa fa-volume-up" onclick="document.getElementById('audio_fire').volume+=0.1"> Up</button>
+			    </div>
+		    </section><!-- /.controls -->
+	    </div><!-- /.wrapper_app -->
 
-			    </div><!-- /.wrapper_volume -->
-		    </div><!-- /.wraper_fire -->
-	    </section><!-- /.ambient -->
-	    <section class="controls">
-
-		    <audio id="audio_rain" src="https://s3-us-west-2.amazonaws.com/app.getclassy/audio/rain-thunder.mp3"></audio>
-		    <div class="controls_rain">
-			    <button onclick="document.getElementById('audio_rain').volume+=0.1">Increase Volume</button>
-			    <button onclick="document.getElementById('audio_rain').volume-=0.1">Decrease Volume</button>
-		    </div>
-		    <audio id="audio_fire" src="https://s3-us-west-2.amazonaws.com/app.getclassy/audio/fireplace.mp3" loop></audio>
-		    <div class="controls_fire ">
-			    <button class="fa fa-volume-down" onclick="document.getElementById('audio_fire').volume-=0.1"> Down</button>
-			    <button class="fa fa-volume-up" onclick="document.getElementById('audio_fire').volume+=0.1"> Up</button>
-		    </div>
-	    </section><!-- /.controls -->
-    </div><!-- /.wrapper_app -->
-
-
+	    <audio id="audio_rain" src="./audio/rain-thunder.mp3" loop></audio>
+	    <audio id="audio_fire" src="./audio/fireplace.mp3" loop></audio>
         <script src="js/vendor/jquery-2.1.1.min.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>

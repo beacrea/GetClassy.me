@@ -7,6 +7,13 @@
  */
 /*
  * -------------------------------------------
+ *	$_IMPORTS
+ * -------------------------------------------
+ */
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
+/*
+ * -------------------------------------------
  *	$_GLOBAL STYLING
  * -------------------------------------------
  */
@@ -27,7 +34,8 @@ h1 {
   font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
   color: #fff;
   text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
-  line-height: 150%; }
+  line-height: 150%;
+  margin: 0; }
 
 /*
  * -------------------------------------------
@@ -65,7 +73,7 @@ h1 {
   padding: 4em 1em;
   color: #fff;
   position: relative;
-  background: url("https://s3-us-west-2.amazonaws.com/app.getclassy/images/fireHero.gif") no-repeat;
+  background: url("../img/app/fireHero.gif") no-repeat;
   background-size: cover;
   z-index: 0; }
   .hero_fire h1, .hero_fire p {
@@ -75,6 +83,8 @@ h1 {
   .hero_fire .leadin, .hero_fire .desc {
     font-weight: 300;
     margin: 1em 0; }
+  .hero_fire .desc {
+    margin-top: 0.5em; }
   .hero_fire h1 {
     font-size: 5em;
     line-height: 100%; }
@@ -125,17 +135,17 @@ iframe {
 
 .wrapper_rain {
   float: left;
-  background-image: url("https://s3-us-west-2.amazonaws.com/app.getclassy/images/rainBG.jpg"); }
+  background-image: url("../img/app/rainBG.jpg"); }
   .wrapper_rain.active {
-    background-image: url("http://media2.giphy.com/media/PJSMTFwEO9iXm/200.gif"); }
+    background-image: url("../img/app/rainAnim.gif"); }
   .wrapper_rain.overlayCommon:after {
     background-color: rgba(60, 130, 160, 0.8); }
 
 .wrapper_fire {
   float: right;
-  background-image: url("https://s3-us-west-2.amazonaws.com/app.getclassy/images/fireBG.jpg"); }
+  background-image: url("../img/app/fireBG.jpg"); }
   .wrapper_fire.active {
-    background-image: url("http://media.giphy.com/media/og8j6norzamI/giphy.gif"); }
+    background-image: url("../img/app/fireAnim.gif"); }
   .wrapper_fire.overlayCommon:after {
     background-color: rgba(150, 0, 0, 0.8); }
 

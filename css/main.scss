@@ -6,6 +6,13 @@
  *
  */
 
+/*
+ * -------------------------------------------
+ *	$_IMPORTS
+ * -------------------------------------------
+ */
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
 
 /*
  * -------------------------------------------
@@ -29,6 +36,7 @@ h1 {
   color: #fff;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
   line-height: 150%;
+  margin: 0;
 }
 
 /*
@@ -69,7 +77,7 @@ h1 {
   padding: 4em 1em;
   color: #fff;
   position: relative;
-  background: url('https://s3-us-west-2.amazonaws.com/app.getclassy/images/fireHero.gif') no-repeat;
+  background: url('../img/app/fireHero.gif') no-repeat;
   background-size: cover;
   z-index: 0;
   h1, p {
@@ -77,8 +85,15 @@ h1 {
 	z-index: 3;
 	text-align: center;
   }
-  .leadin, .desc { font-weight: 300; margin: 1em 0; }
-  h1 { font-size: 5em; line-height: 100%; }
+  .leadin, .desc {
+	font-weight: 300;
+	margin: 1em 0;
+  }
+  .desc { margin-top: 0.5em; }
+  h1 {
+	font-size: 5em;
+	line-height: 100%;
+  }
   &:after {
 	background: rgba(0,0,0,0.6);
   }
@@ -132,9 +147,9 @@ iframe { margin-top: 0.25em; }
 }
 .wrapper_rain {
   float: left;
-  background-image: url('https://s3-us-west-2.amazonaws.com/app.getclassy/images/rainBG.jpg');
+  background-image: url('../img/app/rainBG.jpg');
   &.active {
-	background-image: url('http://media2.giphy.com/media/PJSMTFwEO9iXm/200.gif');
+	background-image: url('../img/app/rainAnim.gif');
   }
   &.overlayCommon:after {
 	background-color: rgba(60,130,160, 0.8);
@@ -142,9 +157,9 @@ iframe { margin-top: 0.25em; }
 }
 .wrapper_fire {
   float: right;
-  background-image: url('https://s3-us-west-2.amazonaws.com/app.getclassy/images/fireBG.jpg');
+  background-image: url('../img/app/fireBG.jpg');
   &.active {
-	background-image: url('http://media.giphy.com/media/og8j6norzamI/giphy.gif');
+	background-image: url('../img/app/fireAnim.gif');
   }
   &.overlayCommon:after {
 	background-color: rgba(150, 0, 0, 0.8);
