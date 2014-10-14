@@ -63,13 +63,13 @@ var ytLoad = function(videoID, listID) {
 
 };
 
-// Default Music
-ytLoad('sCQfTNOC5aE', 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj');
-
+// Load Default Music or Pull From URL Param
 $(function() {
     var url = getParameterByName('ytID');
-    if (typeof listID !== 'undefined' ) {
-        ytLoad(getParameterByName('ytID'), '');
+    if (url !== "" ) {
+        ytLoad(url, '');
+    } else {
+        ytLoad('sCQfTNOC5aE', 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj');
     }
 });
 
