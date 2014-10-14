@@ -44,7 +44,9 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
     </head>
     <body>
 	    <div class="wrapper_app">
@@ -54,8 +56,9 @@
 			    <p class="desc">Make all your moments memorable.</p>
 		    </section><!-- /..hero_fire -->
 
-		    <iframe width="600" height="60" src="//www.youtube.com/embed/thSfGPZGmnQ?list=PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj&autoplay=1" frameborder="0"></iframe>
-		    <section class="ambient clearfix">
+		    <iframe width="600" height="60" src="//www.youtube.com/embed/vmDDOFXSgAs?list=PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj&autoplay=1" frameborder="0"></iframe>
+
+		     <section class="ambient clearfix">
 			    <div class="wrapper_rain overlayCommon">
 				    <span>Rain</span>
 			    </div><!-- /.wrapper_rain -->
@@ -66,8 +69,8 @@
 				    </div><!-- /.wrapper_volume -->
 			    </div><!-- /.wraper_fire -->
 		    </section><!-- /.ambient -->
-		    <section class="controls">
 
+		    <section class="controls">
 			    <div class="controls_rain">
 				    <button onclick="document.getElementById('audio_rain').volume+=0.1">Increase Volume</button>
 				    <button onclick="document.getElementById('audio_rain').volume-=0.1">Decrease Volume</button>
@@ -77,10 +80,12 @@
 				    <button class="fa fa-volume-up" onclick="document.getElementById('audio_fire').volume+=0.1"> Up</button>
 			    </div>
 		    </section><!-- /.controls -->
+
 	    </div><!-- /.wrapper_app -->
 
 	    <audio id="audio_rain" src="./audio/rain-thunder.mp3" loop></audio>
 	    <audio id="audio_fire" src="./audio/fireplace.mp3" loop></audio>
+
         <script src="js/vendor/jquery-2.1.1.min.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
