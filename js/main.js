@@ -79,6 +79,7 @@ $(function() {
  * -------------------------------------------
  */
 
+// TODO: Set this up as a function with a model
 var eastereggs = function() {
     console.log(
         'The following commands will play various songs.\n' +
