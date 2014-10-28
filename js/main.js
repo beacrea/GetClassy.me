@@ -56,16 +56,16 @@ audioLayerToggle('fire');
 
 var ytLoad = function(videoID, listID) {
     if (typeof listID !== 'undefined' ) {
-        $('#ytPlayer').attr('src', '//www.youtube.com/embed/' + videoID + '?list=' + listID + '&autoplay=1');
+        $('#ytPlayer').attr('src', '//www.youtube.com/embed/' + videoID + '?list=' + listID + '&autoplay=1&showinfo=1&rel=0&fs=0');
     } else {
-        $('#ytPlayer').attr('src', '//www.youtube.com/embed/' + videoID + '&autoplay=1');
+        $('#ytPlayer').attr('src', '//www.youtube.com/embed/' + videoID + '&autoplay=1&showinfo=1&rel=0&fs=0');
     }
 
 };
 
 // Load Default Music or Pull From URL Param
 $(function() {
-    var url = getParameterByName('ytID');
+    var url = getParameterByName('v');
     if (url !== "" ) {
         ytLoad(url, '');
     } else {

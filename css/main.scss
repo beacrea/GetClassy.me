@@ -22,8 +22,21 @@
 * { box-sizing: border-box; }
 body {
   font-size: 16px;
-  background: rgb(40,0,0);
+  background: rgb(20,0,0);
   font-family: 'Roboto', helvetica, san-serif;
+  background-size: 200%;
+  background-position: center top;
+  @extend .fireBG;
+  &:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	height: 100%;
+	width: 100%;
+	background-color: rgba(40,0,0,0.9);
+	z-index: 0;
+  }
 }
 
 /*
@@ -45,10 +58,12 @@ h1 {
  * -------------------------------------------
  */
 .wrapper_app {
+  position: relative;
   width: 600px;
   margin: 0 auto;
-  box-shadow: 0 0 1em rgba(0,0,0,0.8);
   background: #111;
+  z-index: 1;
+  box-shadow: 0 0 0.6em rgba(0,0,0, 0.6);
 }
 
 /*
@@ -67,6 +82,27 @@ h1 {
   left: 0;
   z-index: 1;
 }
+.fireBG {
+  background-image: url('../img/app/fireHero.gif');
+  background-repeat: no-repeat;
+}
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
 
 /*
  * -------------------------------------------
@@ -74,12 +110,11 @@ h1 {
  * -------------------------------------------
  */
 .hero_fire {
-  padding: 4em 1em;
+  padding: 5em 1em;
   color: #fff;
   position: relative;
-  background: url('../img/app/fireHero.gif') no-repeat;
-  background-size: cover;
   z-index: 0;
+  background-size: cover;
   h1, p {
 	position: relative;
 	z-index: 3;
@@ -91,12 +126,13 @@ h1 {
   }
   .desc { margin-top: 0.5em; }
   h1 {
-	font-size: 5em;
+	font-size: 8em;
 	line-height: 100%;
   }
   &:after {
-	background: rgba(0,0,0,0.6);
+	background: rgba(20,0,0,0.6);
   }
+  @extend .fireBG;
 }
 
 
