@@ -85,7 +85,8 @@ var eastereggs = function() {
         '===============================================\n' +
         'ocean() = Frank Ocean\'s "Thinking About You"\n' +
         'shoulda() = Jamie Woon\'s "Shoulda"\n' +
-        'sexualheal() = Hot Chip\'s "Sexual Healing"'
+        'sexualheal() = Hot Chip\'s "Sexual Healing"\n' +
+        'whisper() = George Michael\'s "Careless Whisper - Remix"'
     );
 };
 var ocean = function() {
@@ -98,4 +99,7 @@ var shoulda = function() {
 
 var sexualheal = function() {
     ytLoad('kYt_TDcIPT0', '');
+};
+var whisper = function() {
+    $('#ytPlayer').attr('src', '//www.youtube.com/embed/Qu2FWrEilWQ?start=123&autoplay=1');
 };
