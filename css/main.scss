@@ -24,9 +24,9 @@ body {
   font-size: 16px;
   background: rgb(20,0,0);
   font-family: 'Roboto', helvetica, san-serif;
-  background-size: 200%;
+  background-size: 100%;
   background-position: center top;
-  @extend .fireBG;
+  background-image: url('../img/app/jazz.gif');
   &:after {
 	position: absolute;
 	top: 0;
@@ -34,7 +34,7 @@ body {
 	content: '';
 	height: 100%;
 	width: 100%;
-	background-color: rgba(10,0,0,0.9);
+	background-color: rgba(10,0,0,0.7);
 	z-index: 0;
   }
 }
@@ -82,10 +82,6 @@ h1 {
   left: 0;
   z-index: 1;
 }
-.fireBG {
-  background-image: url('../img/app/fireHero.gif');
-  background-repeat: no-repeat;
-}
 .cf:before,
 .cf:after {
   content: " "; /* 1 */
@@ -115,6 +111,8 @@ h1 {
   position: relative;
   z-index: 0;
   background-size: cover;
+  background-image: url('../img/app/fireHero.gif');
+  background-repeat: no-repeat;
   h1, p {
 	position: relative;
 	z-index: 3;
@@ -133,7 +131,6 @@ h1 {
   &:after {
 	background: rgba(20,0,0,0.45);
   }
-  @extend .fireBG;
 }
 
 
