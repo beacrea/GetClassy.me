@@ -84,14 +84,10 @@ var eastereggs = function() {
     console.log(
         'The following commands will play various songs.\n' +
         '===============================================\n' +
-        'ocean() = Frank Ocean\'s "Thinking About You"\n' +
         'shoulda() = Jamie Woon\'s "Shoulda"\n' +
         'sexualheal() = Hot Chip\'s "Sexual Healing"\n' +
         'whisper() = George Michael\'s "Careless Whisper - Remix"'
     );
-};
-var ocean = function() {
-    ytLoad('wD8nAt2xJZM', '');
 };
 
 var shoulda = function() {
