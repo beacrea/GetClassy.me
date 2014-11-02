@@ -99,8 +99,9 @@ var ytLoad = function(videoID, listID, start) {
 // Load Default Music or Pull From URL Param
 $(function() {
     var url = getParameterByName('v');
+    var start = getParameterByName('start');
     if (url !== "" ) {
-        ytLoad(url, '');
+        ytLoad(url, '', start);
     } else {
         chooseSong('defaultjazz');
     }
