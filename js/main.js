@@ -1,5 +1,41 @@
 /*
  * -------------------------------------------
+ *	$_DATA MODELS
+ * -------------------------------------------
+ */
+var songModel = [
+    {
+        list: true,
+        code: 'defaultjazz',
+        ytID_list: 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj',
+        ytID: 'sCQfTNOC5aE'
+    },
+    {
+        list: false,
+        code: 'shoulda',
+        artist: 'Jamie Woon',
+        song: 'Shoulda',
+        ytID: 'oUm4MHEeFCY'
+    },
+    {
+        list: false,
+        code: 'sexheal',
+        artist: 'Hot Chip',
+        song: 'Sexual Healing Cover',
+        ytID: 'kYt_TDcIPT0'
+    },
+    {
+        list: false,
+        code: 'whisper',
+        artist: 'George Michael',
+        song: 'Careless Whisper',
+        ytID: 'Qu2FWrEilWQ',
+        start: 123
+    }
+];
+
+/*
+ * -------------------------------------------
  *	$_PRELOAD IMAGES
  * -------------------------------------------
  */
@@ -54,13 +90,8 @@ audioLayerToggle('fire');
  * -------------------------------------------
  */
 
-var ytLoad = function(videoID, listID) {
-    if (typeof listID !== 'undefined' ) {
-        $('#ytPlayer').attr('src', '//www.youtube.com/embed/' + videoID + '?list=' + listID + '&autoplay=1&showinfo=1&rel=0&fs=0');
-    } else {
-        $('#ytPlayer').attr('src', '//www.youtube.com/embed/' + videoID + '&autoplay=1&showinfo=1&rel=0&fs=0');
-    }
-
+var ytLoad = function(videoID, listID, start) {
+    $('#ytPlayer').attr('src', '//www.youtube.com/embed/' + videoID + '?autoplay=1&showinfo=1&rel=0&fs=0&start=' + start + '&list=' + listID);
 };
 
 // Load Default Music or Pull From URL Param
@@ -69,34 +100,39 @@ $(function() {
     if (url !== "" ) {
         ytLoad(url, '');
     } else {
-        ytLoad('sCQfTNOC5aE', 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj');
+        chooseSong('defaultjazz');
     }
 });
 
 /*
  * -------------------------------------------
- *	$_EASTEREGGS
+ *	$_SONG CONTROL
  * -------------------------------------------
  */
 
-// TODO: Set this up as a function with a model
-var eastereggs = function() {
-    console.log(
-        'The following commands will play various songs.\n' +
-        '===============================================\n' +
-        'shoulda() = Jamie Woon\'s "Shoulda"\n' +
-        'sexualheal() = Hot Chip\'s "Sexual Healing"\n' +
-        'whisper() = George Michael\'s "Careless Whisper - Remix"'
-    );
-};
-
-var shoulda = function() {
-    ytLoad('oUm4MHEeFCY', '');
-};
-
-var sexualheal = function() {
-    ytLoad('kYt_TDcIPT0', '');
-};
-var whisper = function() {
-    $('#ytPlayer').attr('src', '//www.youtube.com/embed/Qu2FWrEilWQ?start=123&autoplay=1');
-};
+// Load Preset Songs
+function chooseSong(code, start) {
+    // Match Code to Model
+        // Check If List
+            // If List, Pass ID
+            // Else, Pass Empty
+    // Load Video & Params
+    // Update Background
+    var listID = '';
+    var d = songModel;
+    for(var i = 0; i < d.length; i++) {
+        if(d[i].code == code)
+        {
+            if (d[i].list === true) {
+                listID = d[i].ytID_list;
+            }
+            if (d[i].start !== undefined) {
+                start = d[i].start;
+            }
+            ytLoad(d[i].ytID, listID, start);
+            console.log('Loaded Song.');
+            console.log(start);
+            return true;
+        }
+    }
+}
