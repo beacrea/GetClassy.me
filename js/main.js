@@ -6,7 +6,7 @@
 var songModel = [
     {
         list: true,
-        code: 'defaultjazz',
+        code: 'default',
         ytID_list: 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj',
         ytID: 'j0Jb72PZAls',
         bg: 'defaultjazz2.gif'
@@ -114,7 +114,7 @@ $(function() {
     if (url !== "" ) {
         ytLoad(url, '', start);
     } else {
-        chooseSong('defaultjazz');
+        chooseSong('default');
     }
 });
 
