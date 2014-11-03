@@ -20,6 +20,14 @@ var songModel = [
         bg: 'sunset.gif'
     },
     {
+      list: false,
+        code: 'blueeyes',
+        artist: 'ZZ Ward',
+        song: 'Blue Eyes Blind',
+        ytID: 'NQjONsUDCm8',
+        bg: 'blueeyes.gif'
+    },
+    {
         list: false,
         code: 'sexheal',
         artist: 'Hot Chip',
@@ -34,6 +42,14 @@ var songModel = [
         song: 'Shoulda',
         ytID: 'oUm4MHEeFCY',
         bg: 'shoulda.gif'
+    },
+    {
+        list: false,
+        code: 'nightlight',
+        artist: 'Jessie Ware',
+        song: 'Night Light',
+        ytID: 'YyY5upiRO8Q',
+        bg: 'nightlight.gif'
     },
     {
         list: false,
@@ -63,7 +79,10 @@ $.preloadImages(
     "img/app/jazz.gif",
     "img/app/sexualheal.gif",
     "img/app/shoulda.gif",
-    "img/app/defaultjazz2.gif"
+    "img/app/defaultjazz2.gif",
+    "img/app/blueeyes.gif",
+    "img/app/sunset.gif",
+    "img/app/nightlight.gif"
 );
 
 /*
