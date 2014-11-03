@@ -20,9 +20,6 @@
 * {
   box-sizing: border-box; }
 
-html, body, .bgOverlay {
-  height: 100%; }
-
 body {
   font-size: 16px;
   background: #140000;
@@ -47,6 +44,9 @@ body {
     background-attachment: fixed;
     z-index: 0; }
 
+@media (min-width: 1281px) {
+  html, body, .bgOverlay {
+    height: 100%; } }
 /*
  * -------------------------------------------
  *	$_TYPOGRAPHY

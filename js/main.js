@@ -13,11 +13,11 @@ var songModel = [
     },
     {
         list: false,
-        code: 'shoulda',
-        artist: 'Jamie Woon',
-        song: 'Shoulda',
-        ytID: 'oUm4MHEeFCY',
-        bg: 'shoulda.gif'
+        code: 'nosunshine',
+        artist: 'Lighthouse Family',
+        song: 'Ain\'t No Sunshine',
+        ytID: '3PW9kKBQqy4',
+        bg: 'sunset.gif'
     },
     {
         list: false,
@@ -26,6 +26,14 @@ var songModel = [
         song: 'Sexual Healing Cover',
         ytID: 'kYt_TDcIPT0',
         bg: 'sexheal.gif'
+    },
+    {
+        list: false,
+        code: 'shoulda',
+        artist: 'Jamie Woon',
+        song: 'Shoulda',
+        ytID: 'oUm4MHEeFCY',
+        bg: 'shoulda.gif'
     },
     {
         list: false,
