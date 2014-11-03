@@ -8,7 +8,8 @@ var songModel = [
         list: true,
         code: 'defaultjazz',
         ytID_list: 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj',
-        ytID: 'sCQfTNOC5aE'
+        ytID: 'sCQfTNOC5aE',
+        bg: 'defaultjazz2.gif'
     },
     {
         list: false,
@@ -53,7 +54,8 @@ $.preloadImages(
     "img/app/fireAnim.gif",
     "img/app/jazz.gif",
     "img/app/sexualheal.gif",
-    "img/app/shoulda.gif"
+    "img/app/shoulda.gif",
+    "img/app/defaultjazz.gif"
 );
 
 /*
@@ -112,7 +114,7 @@ $(function() {
     if (url !== "" ) {
         ytLoad(url, '', start);
     } else {
-        chooseSong('whisper');
+        chooseSong('defaultjazz');
     }
 });
 
