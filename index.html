@@ -49,39 +49,43 @@
 
     </head>
     <body>
-	    <div class="wrapper_app">
-		    <section class="hero_fire overlayCommon">
-			    <p class="leadin">- It's time to -</p>
-			    <h1>Get Classy</h1>
-			    <p class="desc">Make all your moments memorable.</p>
-		    </section><!-- /..hero_fire -->
+	   <div class="bgOverlay">
+		   <div class="wrapper_app">
+			   <section class="hero_fire overlayCommon">
+				   <p class="leadin">- It's time to -</p>
+				   <h1>Get Classy</h1>
+				   <p class="desc">Make all your moments memorable.</p>
+			   </section><!-- /..hero_fire -->
 
-		    <iframe id="ytPlayer" width="600" height="60" frameborder="0"></iframe>
+			   <iframe id="ytPlayer" width="600" height="60" frameborder="0"></iframe>
 
-		     <section class="ambient cf">
-			    <div class="wrapper_rain overlayCommon">
-				    <span>Rain</span>
-			    </div><!-- /.wrapper_rain -->
-			    <div class="wrapper_fire overlayCommon">
-				    <span>Fire</span>
-				    <div class="wrapper_volume">
+			   <section class="ambient cf">
+				   <div class="wrapper_rain overlayCommon">
+					   <span>Rain</span>
+				   </div><!-- /.wrapper_rain -->
+				   <div class="wrapper_fire overlayCommon">
+					   <span>Fire</span>
+					   <div class="wrapper_volume">
 
-				    </div><!-- /.wrapper_volume -->
-			    </div><!-- /.wraper_fire -->
-		    </section><!-- /.ambient -->
+					   </div><!-- /.wrapper_volume -->
+				   </div><!-- /.wraper_fire -->
+			   </section><!-- /.ambient -->
 
-		    <section class="controls">
-			    <div class="controls_rain">
-				    <button onclick="document.getElementById('audio_rain').volume+=0.1">Increase Volume</button>
-				    <button onclick="document.getElementById('audio_rain').volume-=0.1">Decrease Volume</button>
-			    </div>
-			    <div class="controls_fire ">
-				    <button class="fa fa-volume-down" onclick="document.getElementById('audio_fire').volume-=0.1"> Down</button>
-				    <button class="fa fa-volume-up" onclick="document.getElementById('audio_fire').volume+=0.1"> Up</button>
-			    </div>
-		    </section><!-- /.controls -->
+			   <section class="controls">
+				   <div class="controls_rain">
+					   <button onclick="document.getElementById('audio_rain').volume+=0.1">Increase Volume</button>
+					   <button onclick="document.getElementById('audio_rain').volume-=0.1">Decrease Volume</button>
+				   </div>
+				   <div class="controls_fire ">
+					   <button class="fa fa-volume-down" onclick="document.getElementById('audio_fire').volume-=0.1"> Down</button>
+					   <button class="fa fa-volume-up" onclick="document.getElementById('audio_fire').volume+=0.1"> Up</button>
+				   </div>
+			   </section><!-- /.controls -->
 
-	    </div><!-- /.wrapper_app -->
+			   <footer>Made lovingly by <a href="//twitter.com/beacrea" target="_blank">@beacrea</a>.</footer>
+
+		   </div><!-- /.wrapper_app -->
+	   </div><!-- /.bgOverlay -->
 
 	    <audio id="audio_rain" src="./audio/rain-thunder.mp3" loop></audio>
 	    <audio id="audio_fire" src="./audio/fireplace.mp3" loop></audio>

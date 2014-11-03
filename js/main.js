@@ -22,7 +22,8 @@ var songModel = [
         code: 'sexheal',
         artist: 'Hot Chip',
         song: 'Sexual Healing Cover',
-        ytID: 'kYt_TDcIPT0'
+        ytID: 'kYt_TDcIPT0',
+        bg: 'sexheal.gif'
     },
     {
         list: false,
@@ -30,7 +31,8 @@ var songModel = [
         artist: 'George Michael',
         song: 'Careless Whisper',
         ytID: 'Qu2FWrEilWQ',
-        start: 123
+        start: 123,
+        bg: 'jazz.gif'
     }
 ];
 
@@ -103,7 +105,7 @@ $(function() {
     if (url !== "" ) {
         ytLoad(url, '', start);
     } else {
-        chooseSong('defaultjazz');
+        chooseSong('whisper');
     }
 });
 
@@ -131,6 +133,9 @@ function chooseSong(code, start) {
             }
             if (d[i].start !== undefined) {
                 start = d[i].start;
+            }
+            if (d[i].bg !== undefined) {
+                $('.bgOverlay').css('background-image', 'url(img/app/' + d[i].bg + ')');
             }
             ytLoad(d[i].ytID, listID, start);
             console.log('Loaded Song. Starting at ' + start + ' seconds.');
