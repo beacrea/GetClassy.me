@@ -8,7 +8,7 @@ var songModel = [
         list: true,
         code: 'defaultjazz',
         ytID_list: 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj',
-        ytID: 'sCQfTNOC5aE',
+        ytID: 'j0Jb72PZAls',
         bg: 'defaultjazz2.gif'
     },
     {
