@@ -27,10 +27,10 @@ body {
 
 .bgOverlay {
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   background-image: url("../img/app/fireHero.gif");
   background-repeat: no-repeat;
-  transition: background-image 1s ease;
+  transition: background 0.5s ease;
   background-attachment: fixed;
   position: relative; }
   .bgOverlay:after {
@@ -71,7 +71,9 @@ h1 {
 footer {
   color: #999;
   text-align: center;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  border-top: 1px dotted #666;
+  background: #000; }
   footer a, footer a:visited {
     color: orange;
     text-decoration: none; }
@@ -154,7 +156,7 @@ iframe {
 .wrapper_rain, .wrapper_fire {
   text-align: center;
   width: 50%;
-  padding: 6em 1em;
+  padding: 2em 1em;
   background: #fff;
   position: relative;
   background-position: center;
@@ -195,6 +197,34 @@ iframe {
     background-image: url("../img/app/fireAnim.gif"); }
   .wrapper_fire.overlayCommon:after {
     background-color: rgba(150, 0, 0, 0.8); }
+
+/*
+ * -------------------------------------------
+ *	$_PRESETS
+ * -------------------------------------------
+ */
+.presets {
+  font-size: 16px;
+  margin-bottom: 1rem; }
+  .presets h1 {
+    font-size: 3em;
+    text-align: center;
+    padding: 1rem;
+    color: #999; }
+  .presets a {
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    background: #333;
+    color: #999; }
+    .presets a:nth-child(even) {
+      background: #555; }
+    .presets a:hover {
+      cursor: pointer;
+      background: #222; }
+    .presets a .song_title {
+      font-weight: bold;
+      color: #eee; }
 
 /*
  * -------------------------------------------

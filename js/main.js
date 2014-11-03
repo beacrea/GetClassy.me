@@ -15,7 +15,8 @@ var songModel = [
         code: 'shoulda',
         artist: 'Jamie Woon',
         song: 'Shoulda',
-        ytID: 'oUm4MHEeFCY'
+        ytID: 'oUm4MHEeFCY',
+        bg: 'shoulda.gif'
     },
     {
         list: false,
@@ -47,7 +48,13 @@ $.preloadImages = function() {
     }
 };
 
-$.preloadImages("img/app/rainAnim.gif","img/app/fireAnim.gif");
+$.preloadImages(
+    "img/app/rainAnim.gif",
+    "img/app/fireAnim.gif",
+    "img/app/jazz.gif",
+    "img/app/sexualheal.gif",
+    "img/app/shoulda.gif"
+);
 
 /*
  * -------------------------------------------
@@ -109,6 +116,24 @@ $(function() {
     }
 });
 
+// Load Presets To Page
+$(function() {
+    var d = songModel;
+    for(var i = 0; i < d.length; i++) {
+        if(d[i].list == false)
+        {
+            $('.presets').append(
+                    '<a data-song=' + d[i].code + '>' +
+                        '<span class="song_title">' + d[i].song + '</span>' +
+                        ' by ' + d[i].artist +
+                        '</a>');
+        }
+    }
+    $('.presets a').on('click', function(){
+        chooseSong($(this).data('song'));
+    });
+});
+
 /*
  * -------------------------------------------
  *	$_SONG CONTROL
@@ -117,12 +142,6 @@ $(function() {
 
 // Load Preset Songs
 function chooseSong(code, start) {
-    // Match Code to Model
-        // Check If List
-            // If List, Pass ID
-            // Else, Pass Empty
-    // Load Video & Params
-    // Update Background
     var listID = '';
     var d = songModel;
     for(var i = 0; i < d.length; i++) {
