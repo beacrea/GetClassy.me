@@ -20,12 +20,37 @@ var songModel = [
         bg: 'sunset.gif'
     },
     {
-      list: false,
+        list: false,
         code: 'blueeyes',
         artist: 'ZZ Ward',
         song: 'Blue Eyes Blind',
         ytID: 'NQjONsUDCm8',
         bg: 'blueeyes.gif'
+    },
+    {
+        list: false,
+        code: 'whisper',
+        artist: 'George Michael',
+        song: 'Careless Whisper',
+        ytID: 'Qu2FWrEilWQ',
+        start: 123,
+        bg: 'jazz.gif'
+    },
+    {
+        list: false,
+        code: 'hattip',
+        artist: 'Eric B. & Rakim',
+        song: 'Don\'t Sweat The Technique',
+        ytID: '6Y1Emb7Jyks',
+        bg: 'hattip.gif'
+    },
+    {
+        list: false,
+        code: 'nightlight',
+        artist: 'Jessie Ware',
+        song: 'Night Light',
+        ytID: 'YyY5upiRO8Q',
+        bg: 'nightlight.gif'
     },
     {
         list: false,
@@ -42,23 +67,6 @@ var songModel = [
         song: 'Shoulda',
         ytID: 'oUm4MHEeFCY',
         bg: 'shoulda.gif'
-    },
-    {
-        list: false,
-        code: 'nightlight',
-        artist: 'Jessie Ware',
-        song: 'Night Light',
-        ytID: 'YyY5upiRO8Q',
-        bg: 'nightlight.gif'
-    },
-    {
-        list: false,
-        code: 'whisper',
-        artist: 'George Michael',
-        song: 'Careless Whisper',
-        ytID: 'Qu2FWrEilWQ',
-        start: 123,
-        bg: 'jazz.gif'
     }
 ];
 
@@ -82,7 +90,8 @@ $.preloadImages(
     "img/app/defaultjazz2.gif",
     "img/app/blueeyes.gif",
     "img/app/sunset.gif",
-    "img/app/nightlight.gif"
+    "img/app/nightlight.gif",
+    "img/app/hattip.gif"
 );
 
 /*
