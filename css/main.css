@@ -27,7 +27,7 @@ body {
 
 .bgOverlay {
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-color: #111;
   background-repeat: no-repeat;
   transition: background 0.5s ease;
@@ -63,7 +63,7 @@ h1 {
  */
 .wrapper_app {
   position: relative;
-  width: 600px;
+  width: 400px;
   background: #111;
   z-index: 1;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.6); }
@@ -134,7 +134,7 @@ footer {
   .hero_fire .desc {
     margin-top: 0.5em; }
   .hero_fire h1 {
-    font-size: 8em;
+    font-size: 4em;
     line-height: 100%;
     margin-top: 0.25em; }
   .hero_fire:after {
@@ -207,7 +207,7 @@ iframe {
   font-size: 16px;
   margin-bottom: 1rem; }
   .presets h1 {
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     padding: 1rem;
     color: #999; }

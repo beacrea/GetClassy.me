@@ -55,7 +55,7 @@ $.preloadImages(
     "img/app/jazz.gif",
     "img/app/sexualheal.gif",
     "img/app/shoulda.gif",
-    "img/app/defaultjazz.gif"
+    "img/app/defaultjazz2.gif"
 );
 
 /*
