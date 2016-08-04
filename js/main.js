@@ -13,22 +13,6 @@ var songModel = [
     },
     {
         list: false,
-        code: 'nosunshine',
-        artist: 'Lighthouse Family',
-        song: 'Ain\'t No Sunshine',
-        ytID: '3PW9kKBQqy4',
-        bg: 'sunset.gif'
-    },
-    {
-        list: false,
-        code: 'blueeyes',
-        artist: 'ZZ Ward',
-        song: 'Blue Eyes Blind',
-        ytID: 'NQjONsUDCm8',
-        bg: 'blueeyes.gif'
-    },
-    {
-        list: false,
         code: 'whisper',
         artist: 'George Michael',
         song: 'Careless Whisper',
@@ -38,35 +22,12 @@ var songModel = [
     },
     {
         list: false,
-        code: 'hattip',
-        artist: 'Eric B. & Rakim',
-        song: 'Don\'t Sweat The Technique',
-        ytID: '6Y1Emb7Jyks',
-        bg: 'hattip.gif'
-    },
-    {
-        list: false,
-        code: 'nightlight',
-        artist: 'Jessie Ware',
-        song: 'Night Light',
-        ytID: 'YyY5upiRO8Q',
-        bg: 'nightlight.gif'
-    },
-    {
-        list: false,
-        code: 'sexheal',
-        artist: 'Hot Chip',
-        song: 'Sexual Healing Cover',
-        ytID: 'kYt_TDcIPT0',
-        bg: 'sexheal.gif'
-    },
-    {
-        list: false,
-        code: 'shoulda',
-        artist: 'Jamie Woon',
-        song: 'Shoulda',
-        ytID: 'oUm4MHEeFCY',
-        bg: 'shoulda.gif'
+        code: 'tiger',
+        artist: 'Survivor',
+        song: 'Eye Of The Tiger',
+        ytID: 'btPJPFnesV4',
+        start: 0,
+        bg: 'kitten0.gif'
     }
 ];
 
@@ -85,13 +46,14 @@ $.preloadImages(
     "img/app/rainAnim.gif",
     "img/app/fireAnim.gif",
     "img/app/jazz.gif",
-    "img/app/sexualheal.gif",
-    "img/app/shoulda.gif",
+    // "img/app/sexualheal.gif",
+    // "img/app/shoulda.gif",
     "img/app/defaultjazz2.gif",
-    "img/app/blueeyes.gif",
-    "img/app/sunset.gif",
-    "img/app/nightlight.gif",
-    "img/app/hattip.gif"
+    // "img/app/blueeyes.gif",
+    // "img/app/sunset.gif",
+    // "img/app/nightlight.gif",
+    //"img/app/hattip.gif",
+    "img/app/kitten0.gif"
 );
 
 /*
@@ -146,9 +108,12 @@ var ytLoad = function(videoID, listID, start) {
 // Load Default Music or Pull From URL Param
 $(function() {
     var url = getParameterByName('v');
+    var code = getParameterByName('code');
     var start = getParameterByName('start');
     if (url !== "" ) {
         ytLoad(url, '', start);
+    } else if (code !== "") {
+        chooseSong(code);
     } else {
         chooseSong('default');
     }
