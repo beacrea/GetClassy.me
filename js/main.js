@@ -7,8 +7,9 @@ var songModel = [
     {
         list: true,
         code: 'default',
-        ytID_list: 'PL-4U2d6ASRHn-h6UdaKkKnaAhg2T2kxAj',
-        ytID: 'j0Jb72PZAls',
+        ytID_list: 'PL8F6B0753B2CCA128',
+        ytID: 'YmtHdBPzi_w',
+        start: 0,
         bg: 'defaultjazz2.gif'
     },
     {
@@ -25,8 +26,8 @@ var songModel = [
         code: 'tiger',
         artist: 'Survivor',
         song: 'Eye Of The Tiger',
-        ytID: 'btPJPFnesV4',
-        start: 0,
+        ytID: 'QEjgPh4SEmU',
+        start: 5,
         bg: 'kitten0.gif'
     }
 ];
