@@ -140,7 +140,7 @@ audioLayerToggle('fire');
 var ytLoad = function(videoID, listID, start) {
     $('#ytPlayer')
         .attr('src', '//www.youtube.com/embed/' + videoID +
-            '?autoplay=1&showinfo=1&rel=0&fs=0&start=' + start + '&list=' + listID);
+            '?autoplay=1&loop=1&showinfo=1&rel=0&fs=0&start=' + start + '&list=' + listID);
 };
 
 // Load Default Music or Pull From URL Param
