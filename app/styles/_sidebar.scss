@@ -8,10 +8,15 @@ navigation of the app.
 Base Styling
 - - - - - - - - - - - - - */
 .component_sidebar {
-  flex: 0 0 300px;
+  $width: 250px;
+  flex: 0 0 $width;
   background-color: rgba(20,20,20,0.9);
   color: white;
   padding: 1rem;
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+  // TODO: Make this animated, with a hamburger animation to toggle.
+  &.hidden {
+    margin-left: -$width;
+  }
 }
