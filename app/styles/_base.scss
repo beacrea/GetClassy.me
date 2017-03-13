@@ -1,0 +1,24 @@
+/* =========================
+BASE APP STYLES
+Styles that are foundational
+to the application.
+========================= */
+
+/* - - - - - - - - - - - - -
+Body/Html
+- - - - - - - - - - - - - */
+html, body {
+  height: 100%;
+  background: #222;
+}
+
+
+/* - - - - - - - - - - - - -
+Main Container
+- - - - - - - - - - - - - */
+.ember-view, main {
+  height: 100%;
+}
+main {
+  display: flex;
+}

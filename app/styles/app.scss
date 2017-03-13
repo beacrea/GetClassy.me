@@ -1,5 +1,5 @@
 /* =========================
-ALL APP STYLES
+MASTER APP STYLE FILE
 The master file for styles.
 Conventions from DoCSSa 2.0
 (mlarcher.github.io/docssa)
@@ -8,5 +8,11 @@ Conventions from DoCSSa 2.0
 // Imports
 @import "normalize";
 
+// Application Base
+@import "base";
+
 // Navigation
 @import "sidebar";
+
+// Sections
+@import "_sections";

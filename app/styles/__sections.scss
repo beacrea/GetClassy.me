@@ -1,0 +1,20 @@
+/* =========================
+SECTION STYLES
+Each section in the app is a
+different gif/music pairing.
+========================= */
+
+/* - - - - - - - - - - - - -
+Default Section
+- - - - - - - - - - - - - */
+.container_sections {
+  flex-grow: 1;
+  background-color: #eeeeee;
+  height: 100%;
+}
+
+
+/* - - - - - - - - - - - - -
+Other Sections
+- - - - - - - - - - - - - */
+@import "section-start";
